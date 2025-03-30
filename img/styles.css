@@ -5,11 +5,28 @@
 }
 
 
-.nav li{
-   display: inline-block;
-   padding: 10px;
-   margin: 10px;
-   float: right;
-   
+.nav ul{
+display: flex;
+justify-content: flex-end;
+gap: 20px;
+list-style: none;
+padding: 12px;
+margin: 12px;
+right: 10px;
+background: linear-gradient(to left, black,rgb(238, 228, 228));
+}
 
+.nav button{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    height: 25px;
+    width: 58px;
+}
+
+.nav button:hover{
+    background-color: rgb(86, 226, 226);
+    color: transparent;
+    
 }
