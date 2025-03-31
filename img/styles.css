@@ -4,6 +4,22 @@
     box-sizing: border-box;  
 }
 
+body{
+   background-color: aliceblue; 
+}
+
+
+/* cabeçalho */
+
+.nav{
+    width: 100%;
+   background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
 
 .nav ul{
 display: flex;
@@ -13,20 +29,31 @@ list-style: none;
 padding: 12px;
 margin: 12px;
 right: 10px;
-background: linear-gradient(to left, black,rgb(238, 228, 228));
+
 }
 
 .nav button{
-    background-color: white;
-    color: black;
-    border: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
     border-radius: 4px;
     height: 25px;
     width: 58px;
+    border:solid rgb(255, 255, 255) 1px;
+    ;
+    
 }
 
 .nav button:hover{
-    background-color: rgb(86, 226, 226);
+    background-color: rgb(255, 255, 255);
     color: transparent;
+
     
+}
+
+.nomesobre h1 {
+    margin-top: 80px; 
+}
+
+.nomesobre p{
+    margin-top: 90px;
 }
