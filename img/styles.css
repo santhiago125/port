@@ -1,48 +1,64 @@
 * {
+    margin: 0;
     padding: 0;
-    margin: 0; 
-    box-sizing: border-box;  
-}
+    box-sizing: border-box;
+} 
+
 
 body {
-   background-color: #D9BCA3; 
-   font-size: 16px; /* Base para unidades rem */
+    background-color: #D9BCA3;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 80px; 
 }
+
 
 /* cabeçalho */
 .nav {
-    width: 100%;
+    position: absolute;
     background-color: #0d0d0d;
-    margin: 0;
-    padding: 0;
-    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0; 
 }
 
 .nav ul {
     display: flex;
     justify-content: flex-end;
-    gap: 1.25rem; /* 20px → 1.25rem */
+    gap: 1.25rem;
     list-style: none;
-    padding: 0.75rem; /* 12px → 0.75rem */
-    margin: 0.75rem; /* 12px → 0.75rem */
-}
+    padding: 0.75rem;
+    margin: 0.75rem;
+    } 
+
+    main {
+        flex: 1;
+        width: 100%;
+    }
+   
 
 .nav button {
     background-color: transparent;
     color: #a69677;
-    border-radius: 0.25rem; /* 4px → 0.25rem */
-    height: 3.125rem; /* 50px → 3.125rem */
-    width: 7.5rem; /* 120px → 7.5rem */
+    border-radius: 0.25rem;
+    height: 3.125rem; 
+    width: 7.5rem; 
     border: solid #a69677 1px;
-    font-size: 1.5625rem; /* 25px → 1.5625rem */
-    transition: all 0.3s ease; /* Adicionado para suavizar hover */
+    font-size: 1.5625rem; 
+    transition: all 0.3s ease; 
+    
 }
+
 
 .nav button:hover {
     background-color: #a69677;
-    color: #0d0d0d; /* Corrigido - estava transparent */
+    color: #0d0d0d; 
 }
 
 /* Apresentação com Imagem */
@@ -54,9 +70,10 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-    padding: 1.125rem; /* 20px → 1.25rem */
-    min-height: 10vh; /* Alterado de 10vh para 100vh */
-    margin-top: 1rem; /* 80px → 5rem - para compensar navbar fixa */
+    padding: 1.125rem; 
+    min-height: 10vh; 
+    margin-top: 1rem; 
+    
 }
 
 .san img {
@@ -73,7 +90,7 @@ body {
 .san h1 {
     color: #bf8a49;
     text-align: right;
-    font-size: clamp(2.5rem, 5vw, 6.25rem); /* 100px → 6.25rem, responsivo */
+    font-size: clamp(2.5rem, 5vw, 6.25rem); 
     padding: 1rem;
     position: relative;
     top: 480px;  
@@ -83,17 +100,17 @@ body {
 
 /* Sobre Mim */
 .thiago {
-    padding: 2rem; /* 32px → 2rem */
+    padding: 2rem;
 }
 
 .thiago h2 {
-    margin-top: 2.1875rem; /* 35px → 2.1875rem */
-    font-size: clamp(1.5rem, 3vw, 3.375rem); /* 54px → 3.375rem */
+    margin-top: 2.1875rem; 
+    font-size: clamp(1.5rem, 3vw, 3.375rem);
 }
 
 .thiago p {
-    margin-top: 2.4375rem; /* 39px → 2.4375rem */
-    font-size: clamp(1rem, 2vw, 1.875rem); /* 30px → 1.875rem */
+    margin-top: 2.4375rem; 
+    font-size: clamp(1rem, 2vw, 1.875rem); 
     line-height: 1.6;
 }
 
@@ -144,3 +161,100 @@ body {
         font-size: 1.1rem;
     }
 }
+
+/* Projetos */
+
+.projetos{
+    padding: 2rem;
+    background: linear-gradient(45deg, #BF814B, #A69577);
+    color: #0d0d0d; 
+    border-radius: 8px; 
+    margin: 2rem 0; 
+  
+}
+
+.projetos details summary{
+    font-size: 3.0rem;
+  
+}
+
+.projetos details{
+    font-size: 1.75rem; 
+    padding: 1rem;
+    
+
+}
+
+.projetos h2{
+    font-size: 4rem;
+    padding: 1rem;
+    margin-top: 20px;
+    
+}
+
+/* Rede */
+
+.rede {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0d0d0d;
+    z-index: 1000;
+    padding: 15px 0;
+    text-align: center;
+   
+}
+
+.rede ul {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.rede button {
+    background-color: transparent;
+    color: #a69677;
+    border-radius: 0.5rem;
+    height: 3.125rem;
+    width: 8rem; 
+    border: solid #a69677 1px;
+    font-size: 1.2rem; 
+    transition: all 0.3s ease;
+    cursor: pointer; 
+    padding: 0.5rem 1rem; 
+}
+
+.rede button:hover {
+    background-color: #a69677;
+    color: #0d0d0d;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.rede a {
+    text-decoration: none;
+        color: inherit;
+    }
+
+    @media (max-width: 600px) {
+        .rede ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .rede button {
+            width: 100%;
+            max-width: 200px;
+        }
+    }
+
+    #main-content{
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    }
